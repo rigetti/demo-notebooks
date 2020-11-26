@@ -1,0 +1,7 @@
+# Copyright 2020 Rigetti & Co, Inc.
+
+jupyter >= 1.0.0
+matplotlib >= 3.3.0
+numpy >= 1.19.0
+pyquil >= 2.25.0
+tqdm >= 4.53.0
