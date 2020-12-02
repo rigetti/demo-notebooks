@@ -20,7 +20,7 @@ stages:
   before_script:
     - make requirements
     - pip uninstall -y pyquil  # these steps are temporary until Quil-T GA
-    - pip install git+https://github.com/rigetti/pyquil.git@quilt-demo-0#egg=pyquil
+    - pip install git+https://github.com/rigetti/pyquil.git@quilt-demo#egg=pyquil
   script:
     - make test
 
