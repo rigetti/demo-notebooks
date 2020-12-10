@@ -1,0 +1,37 @@
+default:
+  tags:
+    - ec2-docker
+
+stages:
+  - test
+
+.test_template: &test_definition
+  stage: test
+  services:
+    - name: rigetti/quilc
+      alias: quilc
+      command: ["-R", "-P"]
+    - name: rigetti/qvm
+      alias: qvm
+      command: ["-S"]
+  variables:
+    QVM_URL: "http://qvm:5000"
+    QUILC_URL: "tcp://quilc:5555"
+  before_script:
+    - make requirements
+    - pip uninstall -y pyquil  # these steps are temporary until Quil-T GA
+    - pip install git+https://github.com/rigetti/pyquil.git@quilt-demo#egg=pyquil
+  script:
+    - make test
+
+test_python_36:
+  image: python:3.6
+  <<: *test_definition
+
+test_python_37:
+  image: python:3.7
+  <<: *test_definition
+
+test_python_38:
+  image: python:3.8
+  <<: *test_definition
