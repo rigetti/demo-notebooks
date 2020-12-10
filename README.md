@@ -9,10 +9,12 @@ JupyterLab environment provided as part of the Quantum Cloud Services.
 
 ## Getting started
 
-The Python notebooks will be pre-deployed within your JupyterLab environment for easy access. Refer to the
-documentation within your Quantum Cloud Services account for more information on accessing these notebooks.
+The Python notebooks will be pre-deployed within your JupyterLab environment for easy access. If this is
+not yet the case, such as for newly released notebooks, you can upload and run individual notebooks and
+their data in your JupyterLab environment. Refer to the Quantum Cloud Services documentation for more
+information.
 
-In some cases it is also possible to download or checkout notebooks and their associated data locally, and
+In most cases it is also possible to download or checkout notebooks and their associated data locally, and
 run them within a local Jupyter notebook instance. The remainder of this section describes that process.
 
 ### System and Python prerequisites
