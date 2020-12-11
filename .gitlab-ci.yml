@@ -19,8 +19,6 @@ stages:
     QUILC_URL: "tcp://quilc:5555"
   before_script:
     - make requirements
-    - pip uninstall -y pyquil  # these steps are temporary until Quil-T GA
-    - pip install git+https://github.com/rigetti/pyquil.git@quilt-demo#egg=pyquil
   script:
     - make test
 
